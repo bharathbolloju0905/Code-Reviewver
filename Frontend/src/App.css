@@ -1,0 +1,387 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:white
+}
+body,
+.body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+
+}
+
+.left,.right{
+  top: 7%;
+  width: 47vw;
+  height: 85vh;
+  border: 2px solid rgb(145, 145, 120);
+  border-radius: 2%;
+  overflow:auto ;
+  position: relative;
+  padding: 4px;
+}
+.logout{
+  
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: aqua;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  color: black;
+
+}
+.logout:hover{
+  background-color: #30bde0;
+} 
+.body{
+  display: flex;
+  gap:10px;
+justify-content: center;
+align-items: center;
+background: url("./assets/images/bg.jpg");
+position: relative;
+}
+.button button{
+  padding: 10px 14px;
+  border-radius: 4px;
+  background-color: aqua;
+  color:black;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  right:15px;
+  font-weight: 500;
+  font-family: monospace,'Courier New', Courier;
+}
+.right{
+  padding: 10px;
+}
+.loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.2rem;
+  font-family: monospace,'Courier New', Courier;
+}
+.hide-scroll::-webkit-scrollbar{
+  display: none;
+ scrollbar-width: none;
+}
+.right{
+  padding:  4rem 0px;
+}
+.home{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-45deg, #030405, #1b191d, #14122c, #080b0c);
+  background-image: url("./assets/images/bg.jpg");
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: monospace;
+ flex-direction: column;
+ position: relative;
+ padding: 5px;
+
+}
+.contact{
+  padding: 10px;
+  background-color: rgba(114, 153, 153, 0.089);
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+ 
+  
+}
+.img{
+  width: 600px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  translate: 0.5s;
+  box-shadow: 10px 0px 8px rgb(37, 122, 156);
+}
+.contact-links div{
+  width: fit-content;
+  overflow: hidden;
+  padding:3px;
+  width: 25px;
+}
+.contact-links{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+  padding-left: 10px;
+}
+.contact .about{
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px;
+}
+.icon{
+  width: 100%;
+  display: inline-flex;
+  object-fit: cover;
+  animation: animate 2s 1s infinite  alternate-reverse;
+  cursor: pointer;
+}
+
+.img:hover{
+  transform: scale(1.1) ;
+  transition: 0.5s;
+}
+.img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: animate 2s 1s infinite alternate; ;
+}
+.home .content {
+  padding: 10px;
+  width: 60%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border-radius: 10px;
+}
+.logo{
+  cursor: pointer;
+}
+.home p{
+  font-size: large;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.home .content button{
+  padding: 10px 14px;  
+  border-radius: 4px;
+  background-color: aqua;
+  color:black;
+  border: none;
+  cursor: pointer;
+  font-family: monospace,'Courier New', Courier;
+  margin-top: 5%;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.home .content button:hover{
+  background-color: #30bde0;
+}
+
+nav ul{
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.288);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Courier New', Courier, monospace; 
+}
+nav{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+h1{
+  color: aqua;
+}
+nav li{
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+nav ul div{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+nav ul li a:hover{
+ color: aqua;
+ background-color: #100f18c5;
+ border-radius: 10px;
+}
+nav ul>div p{
+ 
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0;
+  font-size: large;
+  padding: 10px;
+} 
+nav ul>div span{
+  color: aqua;
+  font-size:large;
+  font-weight: 800;
+}
+
+.signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:15px;
+  background-color: #40585e42;
+  padding: 2%;
+
+  border-radius: 5px;
+}
+.signup input::placeholder{
+  color: white;
+  font-weight: lighter;
+}
+.signup input:focus{
+  outline: none;
+}
+.signup input{
+  background:transparent ;
+  color: white;
+  border: 0.1rem solid black;
+  padding: 8px;
+  width: 200px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+.signup h1{
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+ word-spacing: -2px;
+}
+.signup form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 5px;
+}
+.signup button{
+  padding: 10px 14px;
+  border-radius: 4px;
+  background-color: rgba(0, 255, 255, 0.863);
+  color:black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: monospace,'Courier New', Courier;
+}
+
+
+@keyframes animate {
+  0%{
+    transform: translateY(-5%);
+    transform: scale(1.1);
+  }
+  100%{
+    transform: translateY(0%);
+    transform: scale(1.0);
+  }
+}
+@media (min-width: 450px) and (max-width: 768px){
+  nav ul div{
+    padding: 4px;
+  }
+  .home nav div>p{
+    padding: 4px;
+    font-size: 16px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  .home .content{
+    width: 85%;
+  }
+  .content h1{
+    font-size: 22px;
+  }
+  .home p{
+    font-size: 15px;
+  }
+  .contact{
+    width: 90%;
+  
+  }
+}
+@media (min-width:242px) and (max-width:550px) {
+ 
+  nav ul div{
+    padding: 2px;
+  }
+  .home nav div>p{
+    padding: 2px;
+    font-size: small;
+  }
+  .home p{
+    font-size: 12px;
+  }
+  .home .content{
+    width: 95%;
+  }
+  .content h1{
+    font-size: large;
+  }
+  .home .content button{
+    font-size: 12px;
+    padding: 7px 7px;
+  }
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    gap: 13px;
+    padding: 10px;
+  } 
+  .hambager{
+    display: inline-block !important;
+  z-index: 5;
+  }
+  .nav ul li a{
+    padding: 3px;
+  }
+  .body{
+    flex-direction: column;
+  }
+  .left , .right{
+    width: 90vw;
+  }
+.contact{   
+  width: 90%;
+ 
+    flex-direction: column;
+    margin-top: 25%
+  }
+  .img{
+    width: 200px;
+    height: 200px;
+    
+  }
+  .home{
+    background-repeat: space;
+  }
+}
