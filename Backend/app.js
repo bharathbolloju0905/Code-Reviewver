@@ -5,9 +5,10 @@ const PORT = process.env.PORT ;
 const app = express();
 const cors = require("cors");
 app.use(cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5000",
+    origin:  "https://code-reviewver.onrender.com", 
     credentials: true
 }));
+
 
 const AIroutes = require("./Routes/AIroutes") ;
 const userRoutes = require("./Routes/userRoutes");
