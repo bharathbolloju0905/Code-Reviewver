@@ -19,7 +19,7 @@ connectToDB() ;
 app.use(cookieParser());
 app.use(express.json()) ;
 app.use(express.urlencoded({extended:true})) ;
-const __dirname = path.resolve();
+const _dirname = path.resolve();
 
 app.use("/ai",AIroutes) ;
 app.use("/user",userRoutes);
@@ -28,9 +28,9 @@ app.use("/user",userRoutes);
 app.get("/",(req,res)=>{
     res.redirect("/user");
 })
-app.use(express.static(path.join(__dirname, "Frontend/dist")));
+app.use(express.static(path.join(_dirname, "Frontend/dist")));
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "Frontend","dist", "index.html"));
+    res.sendFile(path.join(_dirname, "Frontend","dist", "index.html"));
 });
 
 app.listen(PORT, () => {

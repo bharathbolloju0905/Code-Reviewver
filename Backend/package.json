@@ -4,12 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install:frontend": "npm install --prefix ../frontend",
-    "build:frontend": "npm run build --prefix ../frontend",
-    "copy:frontend": "cp -r ../frontend/build ./public",
-    "build": "npm install && npm run install:frontend && npm run build:frontend && npm run copy:frontend"
-  },
+  "build": "npm install && npm run install:frontend && npm run build:frontend && npm run copy:frontend",
+  "install:frontend": "npm install --prefix ./frontend",
+  "build:frontend": "npm run build --prefix ./frontend",
+  "copy:frontend": "cp -r ./frontend/dist ./public"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
