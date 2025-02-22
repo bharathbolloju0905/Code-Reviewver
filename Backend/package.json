@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
 "scripts": {
-    "build": "npm install && npm run install:frontend && npm run build:frontend && npm run copy:frontend",
     "install:frontend": "npm install --prefix ../Frontend",
     "build:frontend": "npm run build --prefix ../Frontend",
-    "copy:frontend": "cp -r ../Frontend/dist ./public"
+    "copy:frontend": "cp -r ../Frontend/dist ./public",
+    "build": "npm install && npm run install:frontend && npm run build:frontend && npm run copy:frontend"
 }
+
 
 
 
