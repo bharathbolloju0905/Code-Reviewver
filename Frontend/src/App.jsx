@@ -6,6 +6,7 @@ import SingUp from './component/Singup/Singup';
 import { getUserContext } from './context/userContext';
 import SingIn from './component/SignIn/Signin';
 import Contact from './component/pages/Contact';
+import SignUp from './component/Singup/Singup';
 function App() {
   const { authUser} = getUserContext();
  
