@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import ReviewerCode from './component/pages/ReviewerCode';
 import Home from './component/pages/Home';
-import SignUp from './component/Singup/Singup';
+import SignUp from './component/Singup/singup';
 import { getUserContext } from './context/userContext';
 import SingIn from './component/SignIn/Signin';
 import Contact from './component/pages/Contact';
