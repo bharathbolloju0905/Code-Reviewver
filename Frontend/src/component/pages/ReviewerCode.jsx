@@ -33,7 +33,7 @@ const ReviewerCode = () => {
                 return ;
             }
 
-            const response = await fetch(`http://localhost:3000/ai/code-review`, {
+            const response = await fetch(`https://code-reviewver.onrender.com/signin/ai/code-review`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

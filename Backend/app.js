@@ -5,7 +5,7 @@ const PORT = process.env.PORT ;
 const app = express();
 const cors = require("cors");
 app.use(cors({
-    origin:  "https://code-reviewver.onrender.com", 
+    origin:  ["https://code-reviewver.onrender.com", "http://localhost:5000"],
     credentials: true
 }));
 
