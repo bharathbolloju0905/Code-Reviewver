@@ -1,16 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
-dotenv.config();
-
-const PORT = process.env.PORT || 3000;
+dotenv.config() ;
+const PORT = process.env.PORT ;
 const app = express();
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
-const { connectToDB } = require("./DB/connectToDB");
-const path = require("path");
-
-const _dirname = path.resolve();
-
 app.use(cors({
     origin: ["https://code-reviewver.onrender.com", "http://localhost:5000"], 
     credentials: true, 
@@ -18,23 +11,33 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"], 
 }));
 
-connectToDB();
 
-app.use(cookieParser());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-const AIroutes = require("./Routes/AIroutes");
+const AIroutes = require("./Routes/AIroutes") ;
 const userRoutes = require("./Routes/userRoutes");
+const cookieParser = require("cookie-parser");
+const {connectToDB} = require("./DB/connectToDB");
+const path = require("path");
+connectToDB() ;
+app.use(cookieParser());
+app.use(express.json()) ;
+app.use(express.urlencoded({extended:true})) ;
+const _dirname = path.dirname(__filename);
 
-app.use("/ai", AIroutes);
-app.use("/user", userRoutes);
 
-app.use(express.static(path.join(_dirname, "Frontend", "dist")));
+app.use("/ai",AIroutes) ;
+app.use("/user",userRoutes);
+
+
+app.get("/",(req,res)=>{
+    res.redirect("/user");
+})
+app.use(express.static(path.join(_dirname, "../Frontend/dist")));
 app.get("*", (req, res) => {
-    res.sendFile(path.join(_dirname, "Frontend", "dist", "index.html"));
+    res.sendFile(path.join(_dirname, "../Frontend/dist", "index.html"));
 });
 
+
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`"Server is running on port ${PORT}"`);
 });
