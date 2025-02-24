@@ -29,9 +29,7 @@ app.use("/ai",AIroutes) ;
 app.use("/user",userRoutes);
 
 
-app.get("/",(req,res)=>{
-    res.redirect("/signin");
-})
+
 app.use(express.static(path.join(_dirname, "../Frontend/dist")));
 app.get("*", (req, res) => {
     res.sendFile(path.join(_dirname, "../Frontend/dist", "index.html"));
