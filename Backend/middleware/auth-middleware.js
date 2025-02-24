@@ -4,11 +4,13 @@ const userModel = require('../models/userModel');
 module.exports.authentiateUser = async (req, res , next) => {
     try{
         const token = req.cookies.token;
+        console.log("Token",token);
         if(!token){
             return res.status(401).json({error:"Unauthorized Access"});
         }
         const verifyToken = jwt.verify(token,process.env.JWT_SECRET);
         const user = await userModel.findById(verifyToken.id).select("-password");
+        console.log("User",user);
         if(!user){
             return res.status(401).json({error:"Unauthorized Access"});
         }
