@@ -30,7 +30,7 @@ app.use("/user",userRoutes);
 
 
 app.get("/",(req,res)=>{
-    res.redirect("/user");
+    res.redirect("/signin");
 })
 app.use(express.static(path.join(_dirname, "../Frontend/dist")));
 app.get("*", (req, res) => {
