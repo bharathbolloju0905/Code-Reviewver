@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 dotenv.config() ;
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const cors = require("cors");
 app.use(cors({
@@ -22,7 +22,8 @@ connectToDB() ;
 app.use(cookieParser());
 app.use(express.json()) ;
 app.use(express.urlencoded({extended:true})) ;
-const _dirname = path.dirname(__filename);
+const __dirname = path.resolve();
+
 
 
 app.use("/ai",AIroutes) ;
@@ -30,9 +31,9 @@ app.use("/user",userRoutes);
 
 
 
-app.use(express.static(path.join(_dirname, "../Frontend/dist")));
+app.use(express.static(path.join(__dirname, "../Frontend/dist")));
 app.get("*", (req, res) => {
-    res.sendFile(path.join(_dirname, "../Frontend/dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../Frontend/dist", "index.html"));
 });
 
 
