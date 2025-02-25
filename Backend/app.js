@@ -22,7 +22,7 @@ connectToDB() ;
 app.use(cookieParser());
 app.use(express.json()) ;
 app.use(express.urlencoded({extended:true})) ;
-const __dirname = path.resolve();
+
 
 
 

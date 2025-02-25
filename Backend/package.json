@@ -8,11 +8,8 @@
    "build:frontend": "npm install --prefix ../Frontend --include=dev && npm run build --prefix ../Frontend",
     "copy:frontend": "cp -r ../Frontend/dist ./public",
     "build": "npm install && npm run install:frontend && npm run build:frontend && npm run copy:frontend"
-}
-
-
-
-
+},
+"type": "commonjs"
 ,
   "keywords": [],
   "author": "",
