@@ -357,6 +357,7 @@ nav ul>div span{
     right: 0px;
     gap: 13px;
     padding: 10px;
+    z-index: 4;
   } 
   .hambager{
     display: inline-block !important;

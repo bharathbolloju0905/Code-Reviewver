@@ -29,7 +29,6 @@ const NavBar = () => {
     }
     function handleClick(){
         
-        console.log("Hellow",navisable)
         if(navisable){
             first.current.style.display ="none" ;
             setnavisable(false)

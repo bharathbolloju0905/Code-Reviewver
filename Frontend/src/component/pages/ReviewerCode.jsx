@@ -41,7 +41,7 @@ const ReviewerCode = () => {
                 body: JSON.stringify({ code }),
                 credentials: 'include'
             })
-            console.log(response)
+           
             const data = await response.json();
             setResult(data)
             setLoading(false)
