@@ -15,7 +15,7 @@ const NavBar = () => {
         }
 
         try {
-            const res = await fetch('http://localhost:3000/user/logout');
+            const res = await fetch('https://code-reviewver.onrender.com/user/logout');
             
             if (!res.ok) throw new Error("Logout request failed");
 
